@@ -23,13 +23,11 @@ class Solution {
         if (node == null)
             return;
 
-        if (node.left != null)
-            traverse(node.left);
+        traverse(node.left);
 
         values.add(node.val);
 
-        if (node.right != null)
-            traverse(node.right);
+        traverse(node.right);
     }
 
     public List<Integer> inorderTraversal(TreeNode root) {
