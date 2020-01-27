@@ -26,8 +26,10 @@ class Solution {
                 node = node.left;
             } else {
                 node = stack.pop();
-                values.add(node.val);
-                stack.push(node.right);
+                if (node != null) {
+                    values.add(node.val);
+                    node = node.right;
+                }
             }
         }
 
