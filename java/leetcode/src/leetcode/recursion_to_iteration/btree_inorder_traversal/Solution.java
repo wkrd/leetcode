@@ -16,23 +16,21 @@ class TreeNode {
 }
 
 class Solution {
+    public List<Integer> inorderTraversal(TreeNode node) {
+        List<Integer> values = new LinkedList<>();
+        Stack<TreeNode> stack = new Stack<>();
 
-    private List<Integer> values = new LinkedList<>();
+        while (!stack.isEmpty() || node != null) {
+            if (node != null) {
+                stack.push(node);
+                node = node.left;
+            } else {
+                node = stack.pop();
+                values.add(node.val);
+                stack.push(node.right);
+            }
+        }
 
-    private void traverse(TreeNode node) {
-        if (node == null)
-            return;
-
-        traverse(node.left);
-
-        values.add(node.val);
-
-        traverse(node.right);
-    }
-
-    public List<Integer> inorderTraversal(TreeNode root) {
-        traverse(root);
         return values;
     }
-
 }
