@@ -1,0 +1,12 @@
+# Java stuff
+*.class
+
+# Vim stuff
+*.swp
+
+# JavaScript stuff
+node_modules
+
+# IDE stuff
+.vscode
+
