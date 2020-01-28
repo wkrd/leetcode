@@ -35,7 +35,6 @@ class Solution {
         if (list.size() - 1 < level) {
             list.add(new LinkedList<>());
         }
-
         list.get(level).add(node.val);
 
         helper(node.left, level + 1);
