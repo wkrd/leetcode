@@ -3,23 +3,24 @@ package leetcode.recursion_to_iteration.btree_levelorder_traversal;
 import java.util.*;
 
 /**
- * Definition for a binary tree node.
- */
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
-
-/**
  * Definition for a binary tree node. public class TreeNode { int val; TreeNode
  * left; TreeNode right; TreeNode(int x) { val = x; } }
  */
-class Solution {
+class SolutionRecursive {
+
+    /**
+     * Definition for a binary tree node.
+     */
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
+
     List<List<Integer>> list = new ArrayList<>(); // ArrayList for O(1) lookup
 
     public List<List<Integer>> levelOrder(TreeNode root) {
