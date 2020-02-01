@@ -16,7 +16,7 @@ class Solution {
             return;
 
         int minHeightIndex = left;
-        for (int i = left; i < right; i++) {
+        for (int i = left; i <= right; i++) {
             if (heights[i] < heights[minHeightIndex]) {
                 minHeightIndex = i;
             }
@@ -32,7 +32,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        int area = new Solution().largestRectangleArea(new int[] { 1, 2, 4, 3 });
+        int area = new Solution().largestRectangleArea(new int[] { 4, 2 });
 
         System.out.println(area);
     }
