@@ -1,4 +1,4 @@
-package leetcode.top_easy.remove_linked_list_node;
+package leetcode.top_easy.remove_nth_end_of_list;
 
 class ListNode {
     int val;
