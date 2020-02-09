@@ -1,7 +1,5 @@
 package leetcode._coin_change_2;
 
-import java.util.Arrays;
-
 class Solution {
 
     public int change(int amount, int[] coins) {
