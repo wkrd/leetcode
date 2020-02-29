@@ -12,6 +12,7 @@ class ListNode {
 class Solution {
     public boolean isPalindrome(ListNode head) {
 
+        // TODO:
         // intuition:
         // space : O 1
         // time: O n
