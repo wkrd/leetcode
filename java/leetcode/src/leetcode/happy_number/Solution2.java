@@ -1,6 +1,6 @@
 package leetcode.happy_number;
 
-class Solution {
+class Solution2 {
 
     int getNext(int n) {
         int newN = 0;
