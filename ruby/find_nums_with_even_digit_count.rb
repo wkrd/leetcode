@@ -14,10 +14,8 @@ def find_numbers(nums)
   even_count
 end
 
-
 # @param {Integer[]} nums
 # @return {Integer}
 def find_numbers(nums)
-  nums.count {|num| (Math.log10(num).to_i + 1) % 2 == 0 }
+  nums.count { |num| (Math.log10(num).to_i + 1) % 2 == 0 }
 end
-
