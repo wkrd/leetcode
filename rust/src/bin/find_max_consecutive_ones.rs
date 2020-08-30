@@ -1,3 +1,5 @@
+#!/usr/bin/env run-cargo-script
+
 use std::cmp;
 
 struct Solution {}
