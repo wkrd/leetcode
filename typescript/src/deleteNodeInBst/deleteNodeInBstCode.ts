@@ -36,7 +36,10 @@ const successor = (root: TreeNode): TreeNode => {
   return node
 }
 
-function deleteNode(root: TreeNode | null, key: number): TreeNode | null {
+export function deleteNode(
+  root: TreeNode | null,
+  key: number
+): TreeNode | null {
   if (!root) return null
 
   if (root.val < key) {

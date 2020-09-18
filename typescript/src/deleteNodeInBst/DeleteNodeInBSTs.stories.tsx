@@ -17,7 +17,11 @@ export const LoggedIn = Template.bind({})
 LoggedIn.args = {
   root: new TreeNode(
     100,
-    new TreeNode(50, new TreeNode(25), new TreeNode(75)),
+    new TreeNode(
+      50,
+      new TreeNode(25, null, new TreeNode(30)),
+      new TreeNode(75, new TreeNode(74), new TreeNode(80))
+    ),
     new TreeNode(150)
   ),
 }
