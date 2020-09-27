@@ -1,20 +1,20 @@
-class Tri {
-  constructor(public name: string, public children: Tri[] = []) {}
+class Person {
+  constructor(public name: string, public children: Person[] = []) {}
 }
 
 class ThroneInheritance {
-  private root: Tri
-  private lookup: Map<string, Tri> = new Map()
+  private root: Person
+  private lookup: Map<string, Person> = new Map()
   private dead: Set<string> = new Set()
 
   constructor(kingName: string) {
-    this.root = new Tri(kingName)
+    this.root = new Person(kingName)
     this.lookup.set(kingName, this.root)
   }
 
   birth(parentName: string, childName: string): void {
     const parent = this.lookup.get(parentName)!
-    const tri = new Tri(childName)
+    const tri = new Person(childName)
     parent.children.push(tri)
     this.lookup.set(childName, tri)
   }
@@ -26,7 +26,7 @@ class ThroneInheritance {
   getInheritanceOrder(): string[] {
     const order: string[] = []
 
-    const q: Tri[] = [this.root]
+    const q: Person[] = [this.root]
     while (q.length) {
       const t = q.pop()!
 
