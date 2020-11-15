@@ -2,7 +2,37 @@ class Node {
   constructor(public edges = new Map<number, number>()) {}
 }
 
+// bellman ford
 function maxProbability(
+  n: number,
+  edges: number[][],
+  succProb: number[],
+  start: number,
+  end: number
+): number {
+  const probabilities: number[] = new Array<number>(n).fill(0)
+  probabilities[start] = 1
+
+  for (let i = 0; i < n; i++) {
+    for (let e = 0; e < edges.length; e++) {
+      const [u, v] = edges[e]
+      const probability = succProb[e]
+      probabilities[u] = Math.max(
+        probabilities[u],
+        probabilities[v] * probability
+      )
+      probabilities[v] = Math.max(
+        probabilities[v],
+        probabilities[u] * probability
+      )
+    }
+  }
+
+  return probabilities[end]
+}
+
+// dijkstra
+export function maxProbability_Dijkstra(
   n: number,
   edges: number[][],
   succProb: number[],
