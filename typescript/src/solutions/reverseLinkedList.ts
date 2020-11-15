@@ -22,5 +22,3 @@ function reverseList(head: ListNode | null): ListNode | null {
 
   return prev
 }
-
-console.log()
